@@ -70,3 +70,7 @@
     }
 }
 
+.animate-delay {
+    animation-delay: 30s;
+}
+
