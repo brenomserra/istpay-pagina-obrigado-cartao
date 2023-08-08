@@ -9,6 +9,8 @@
     <!-- Mudar a URL com a automação necessária -->
     <title>Página de obrigado</title>
     <link rel="shortcut icon" href="./assets/favicon-istpay.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,10 +36,11 @@
 </head>
 
 <body>
+      
     <header>
         <!-- Cor de fundo do navbar -->
         <nav class="bg-istpay-laranja">
-            <div class="max-w-screen-xl flex flex-wrap justify-between items-center mx-auto p-5">
+            <div class="max-w-screen-xl flex flex-wrap justify-between items-center mx-auto p-5 animated-text">
                 <!-- Referência do JS para reconhecer a logo do cliente -->
                 <a href="javascript:void(0)">
                     <img src="./assets/istpay-logo-branca-quadrada.png" class="w-16 h-16 mr-3" alt="Imagem do logotipo da loja" />
@@ -54,29 +57,30 @@
     
     <!-- Título, subtítulo com timer e botão de baixar boleto -->
     <div class="mt-6 text-center">
-        <h1 class="mt-2 mb-6 text-3xl font-semibold tracking-tight sm:text-5xl text-cor-verde">Parabéns pela sua
-            escolha!</h1>
-        <h2 class="mb-6 lg:text-lg">Seu pedido foi realizado com <span class="text-cor-verde font-bold">sucesso!</span>
-        </h2>
+        <h1 class="mt-2 mb-6 text-3xl font-semibold tracking-tight sm:text-5xl text-cor-verde animated-text">
+            Parabéns pela sua escolha!
+        </h1>
+        <h2 class="mb-6 lg:text-lg animated-text">Seu pedido foi realizado com <span class="text-cor-verde font-bold">sucesso!</span></h2>
     </div>
+    
 
     <div class="text-center">
         
         <div class="flex justify-center">
-            <div class="bg-green-500 text-white rounded-full p-3 animate-ping">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-ping" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
+            <div class="bg-green-500 text-white rounded-full p-3 animate-ping animate-delay" id="ping-element">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-ping" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
             </div>
-        </div>
-
+        </div>        
+        
         <img src="./assets/cartao-logo.png" class="w-24 h-24 mx-auto" alt="Logo do Cartão de Crédito">
 
         <div class="mt-6 p-1 bg-cor-cinza">
-            <h5 class="text-2xl mt-5">
+            <h5 class="text-2xl mt-5 animate-slide-left">
                 Pagamento por <span class="font-bold"> Cartão de Crédito</span>
             </h5>
-            <p class="mt-4 p-2 text-xl" style="font-size: 15px;">
+            <p class="mt-4 p-2 text-xl animate-slide-right" style="font-size: 15px;">
                 *Em breve você receberá um e-mail em <b>breno@gmail.com </b>com todos os detalhes do
                 seu pedido.
             </p>
@@ -84,7 +88,7 @@
     </div> 
 
     <!-- Botão WhatsApp -->
-    <div class="mt-4 mb-2 p-5 flex justify-center sm:justify-end">
+    <div class="mt-4 mb-2 p-5 flex justify-center sm:justify-end animate-slide-left">
         <a href="https://api.whatsapp.com/send?phone=31971274471" target="_blank"
             class="inline-flex items-center px-4 py-2 border border-cor-verde rounded-md font-semibold text-cor-verde focus:outline-none focus:ring-white ml-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-7" fill="currentColor" style="color: #05a93d;"
@@ -97,7 +101,7 @@
     </div>
 
     <!-- Detalhes e pedido -->
-    <div class="flex justify-between items-center mx-6 sm:mx-20 mb-2 sm:mb-5">
+    <div class="flex justify-between items-center mx-6 sm:mx-20 mb-2 sm:mb-5 animate-slide-right">
         <h4 class="font-bold text-cor-azulEscuro text-2xl sm:text-3xl">
             Detalhes
         </h4>
@@ -107,7 +111,7 @@
         </h4>
     </div>
 
-    <div class="col-lg-6 pl-7 mb-5 p-4">
+    <div class="col-lg-6 pl-7 mb-5 p-4 animated-text">
         <h5 class="text-lg sm:text-xl">
             Compra realizada: <span class="font-bold">Produto teste - Opção A</span>
         </h5>

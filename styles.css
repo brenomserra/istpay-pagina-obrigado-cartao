@@ -1,0 +1,79 @@
+/* Surgimento dos textos */
+.animated-text {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: appearAndGrow 2s ease-in-out forwards; 
+}
+
+@keyframes appearAndGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .animated-text {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Deslize da esquerda para direita e esquerda para direita */
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-left {
+    animation: slideFromLeft 2s ease-in-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideFromRight 2s ease-in-out forwards;
+}
+
+/* Animação do símbolo de verificado */
+@keyframes ping-delayed {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.animate-ping-slow {
+    animation: ping-delayed 9s ease-in-out infinite;
+}
+
+.animate-delay {
+    animation-delay: 9s;
+}
